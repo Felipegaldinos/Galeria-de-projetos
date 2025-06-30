@@ -265,5 +265,13 @@ window.projectsData = [
     image: "img/portifolioweb.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://felipegaldinos.github.io/portifolio-web/"
+  },
+  {
+    name: "Loja de calçados",
+    description: "Loja de calçados, com carrinho e opção de marca seu favorito.",
+    technologies: ["React", "TypeScript"],
+    image: "img/calcados.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://loja-calcados-nine.vercel.app/"
   }
 ];
