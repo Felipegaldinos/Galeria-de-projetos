@@ -273,5 +273,13 @@ window.projectsData = [
     image: "img/calcados.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://loja-calcados-nine.vercel.app/"
+  },
+  {
+    name: "Landing page Vendas VSL",
+    description: "Página de Vendas com VSL que Vendem Mesmo Enquanto Você Dorme!",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/vsl.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://landingpage-vendas.vercel.app/"
   }
 ];
