@@ -281,5 +281,13 @@ window.projectsData = [
     image: "img/vsl.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://landingpage-vendas.vercel.app/"
+  },
+  {
+    name: "Landing page para vendas de Snartphone",
+    description: "Modelo de página que aumenta o número de compras",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/celular.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://felipegaldinos.github.io/landingpage-celular/"
   }
 ];
