@@ -204,7 +204,7 @@ window.projectsData = [
   },*/
   {
     name: "E-commerce",
-    description: "Plataforma de e-commerce completa com carrinho de compras, pagamentos e painel.",
+    description: "Plataforma de e-commerce completa com carrinho de compras, painel administrador e controle de estoque.",
     technologies: ["React", "Firebase", "TypeScript"],
     image: "img/araujo-esportes.png",
     github: "https://github.com/felipegaldinos",
@@ -260,7 +260,7 @@ window.projectsData = [
   },
   {
     name: "Portífolio Web",
-    description: "Plataforma de cursos gratuítos de tecnologia.",
+    description: "Portífolio web, formato institucional.",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "img/portifolioweb.png",
     github: "https://github.com/felipegaldinos",
@@ -283,8 +283,8 @@ window.projectsData = [
     demo: "https://landingpage-vendas.vercel.app/"
   },
   {
-    name: "Landing page para vendas de Snartphone",
-    description: "Modelo de página que aumenta o número de compras",
+    name: "Landing page para vendas de Smartphone",
+    description: "Modelo de página que aumenta o número de vendas.",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "img/celular.png",
     github: "https://github.com/felipegaldinos",
