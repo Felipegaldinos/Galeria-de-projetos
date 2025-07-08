@@ -17,6 +17,26 @@ body {
   overflow-x: hidden;
 }
 
+.contato-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 40px;
+  background-color: #000;
+  border-bottom: 1px solid #111;
+  font-size: 1.5rem;
+}
+
+.contato-header a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contato-header a:hover {
+  color: #4f9cf9; /* Azul neon suave */
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
