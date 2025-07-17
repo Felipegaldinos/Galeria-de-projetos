@@ -211,6 +211,30 @@ window.projectsData = [
     demo: "https://catalogo-araujo-esportes.firebaseapp.com"
   },
   {
+    name: "Site para Acadêmia",
+    description: "Modelo de site intitucional.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/academia.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://academia-roan-ten.vercel.app/"
+  },
+  {
+    name: "Site para agendamento de viagens",
+    description: "Site institucional para reservar viagens.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/destino.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://destino-encantado.vercel.app/"
+  },
+  {
+    name: "Site de saúde e lazer",
+    description: "Site institucional de saúde e lazer .",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/equilibrio.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://equlibrio-vital.vercel.app/"
+  },
+  {
     name: "Portifólio",
     description: "Portifólio moderno, com galeria de projetos e com uma pré-vizualização do site.",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -225,6 +249,14 @@ window.projectsData = [
     image: "img/CVCroft.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://curriculo-inteligente-3f70e.firebaseapp.com/"
+  },
+  {
+    name: "Loja de calçados",
+    description: "Loja de calçados, com carrinho e opção de marca seu favorito.",
+    technologies: ["React", "TypeScript"],
+    image: "img/calcados.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://loja-calcados-nine.vercel.app/"
   },
   {
     name: "Landing Page",
@@ -243,14 +275,6 @@ window.projectsData = [
     demo: "https://instituto-fgs.vercel.app/"
   },
   {
-    name: "Catálogo de produtos",
-    description: "Catálogo de produtos, com carrinho e direcionamento para compras via whatsapp.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    image: "img/catalogo-araujo.png",
-    github: "https://github.com/felipegaldinos",
-    demo: "https://catalogo-pied.vercel.app/"
-  },
-  {
     name: "Loja online simples",
     description: "Loja online, com catálogo de produtos que direciona para o whatsapp.",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -267,14 +291,6 @@ window.projectsData = [
     demo: "https://felipegaldinos.github.io/portifolio-web/"
   },
   {
-    name: "Loja de calçados",
-    description: "Loja de calçados, com carrinho e opção de marca seu favorito.",
-    technologies: ["React", "TypeScript"],
-    image: "img/calcados.png",
-    github: "https://github.com/felipegaldinos",
-    demo: "https://loja-calcados-nine.vercel.app/"
-  },
-  {
     name: "Landing page Vendas VSL",
     description: "Página de Vendas com VSL que Vendem Mesmo Enquanto Você Dorme!",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -289,5 +305,13 @@ window.projectsData = [
     image: "img/celular.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://felipegaldinos.github.io/landingpage-celular/"
+  },
+  {
+    name: "Catálogo de produtos",
+    description: "Catálogo de produtos, com carrinho e direcionamento para compras via whatsapp.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/catalogo-araujo.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://catalogo-pied.vercel.app/"
   }
 ];
