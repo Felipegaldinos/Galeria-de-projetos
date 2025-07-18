@@ -212,7 +212,7 @@ window.projectsData = [
   },
   {
     name: "Site para Acadêmia",
-    description: "Modelo de site intitucional.",
+    description: "Modelo de site intitucional que se encaixa em vários nichos.",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "img/academia.png",
     github: "https://github.com/felipegaldinos",
@@ -233,6 +233,30 @@ window.projectsData = [
     image: "img/equilibrio.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://equlibrio-vital.vercel.app/"
+  },
+  {
+    name: "Landing page para Acadêmia",
+    description: "Modelo de site página unica para capitação de clientes.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/vivafit.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://vivafit-academia.vercel.app/"
+  },
+  {
+    name: "Clínica Médica",
+    description: "Site para clinicas médicas, com agenda, mapa de localização e etc.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/medica.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://clinica-vida-plena.vercel.app/"
+  },
+  {
+    name: "Clínica Odontológica",
+    description: "Site institucional de saúde e lazer .",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/sorriso.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://sorriso-ideal.vercel.app/"
   },
   {
     name: "Portifólio",
