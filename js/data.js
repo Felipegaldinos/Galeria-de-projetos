@@ -259,6 +259,38 @@ window.projectsData = [
     demo: "https://sorriso-ideal.vercel.app/"
   },
   {
+    name: "Acadêmia Blackfit",
+    description: "Landing page para acadêmias.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/acade.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://academia-lp.vercel.app/"
+  },
+  {
+    name: "Advocacia",
+    description: "Site para advocacias com menu de navegação.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/ad.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://advocacia-jet.vercel.app/"
+  },
+  {
+    name: "Restaurante",
+    description: "Site com menu de navegação, podendo reserva horário.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/restaurante.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://restaurante-tau-khaki.vercel.app/"
+  },
+  {
+    name: "Landing page para curso",
+    description: "Landing page para captar alunos e vender cursos.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/cursos.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://cursos-xi.vercel.app/"
+  },
+  {
     name: "Portifólio",
     description: "Portifólio moderno, com galeria de projetos e com uma pré-vizualização do site.",
     technologies: ["HTML", "CSS", "JavaScript"],
