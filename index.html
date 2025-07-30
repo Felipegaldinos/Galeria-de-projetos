@@ -16,6 +16,10 @@
 <body>
    <!-- Header de Contato -->
 <header class="contato-header">
+      <!-- Foto como logo -->
+      <a href="#" id="profileIcon" aria-label="Perfil">
+        <img src="img/perfil.jpg" alt="Minha Foto" class="icone-foto" />
+      </a>
   <a href="https://wa.me/5584991829988" target="_blank" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
@@ -32,7 +36,15 @@
             <p>Carregando projetos...</p>
         </div>
     </div>
-
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModalButton">&times;</span>
+            <h2>Olá! Sou Felipe Galdino</h2>
+            <p>Sou Desenvolvedor Web com conhecimentos em UX/UI Design, unindo código e design para criar experiências digitais funcionais e agradáveis.</p>
+            <p>Nesta galeria, você encontrará alguns dos meus projetos — resultado de aprendizado contínuo, atenção aos detalhes e paixão por criar interfaces intuitivas.</p>
+            <p>Fique à vontade para explorar e entrar em contato se tiver alguma dúvida ou proposta!</p>
+        </div>
+    </div>
     <main id="main-content">
         <div class="container">
             <header class="gallery-header">
@@ -71,5 +83,6 @@
     <script src="js/data.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/main.js"></script>
+     <script src="js/modal.js"></script>
 </body>
 </html>

@@ -11,6 +11,9 @@
   .gallery-controls {
     flex-direction: column;
   }
+  .contato-header {
+    height: 50px;
+  }
 }
 
 @media (max-width: 480px) {

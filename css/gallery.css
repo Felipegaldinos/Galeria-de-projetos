@@ -5,6 +5,7 @@ main {
 
 .gallery-header {
   text-align: center;
+  margin-top: 35px;
   margin-bottom: 4rem;
   animation: fadeInUp 0.8s ease;
 }

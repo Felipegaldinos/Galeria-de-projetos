@@ -235,6 +235,14 @@ window.projectsData = [
     demo: "https://equlibrio-vital.vercel.app/"
   },
   {
+    name: "Site para Acadêmia",
+    description: "Modelo de site one page com menu de navegação.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "img/fit.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://felipegaldinos.github.io/redzone-fitness/"
+  },
+  {
     name: "Landing page para Acadêmia",
     description: "Modelo de site página unica para capitação de clientes.",
     technologies: ["HTML", "CSS", "JavaScript"],

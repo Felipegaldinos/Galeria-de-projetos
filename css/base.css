@@ -16,8 +16,83 @@ body {
   background-color: #000000;
   overflow-x: hidden;
 }
+/* Foto personalizada como ícone */
+.icone-foto {
+  margin-top: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4f9cf9;
+  transition: transform 0.3s ease;
+}
+
+.icone-foto:hover {
+  transform: scale(1.1);
+}
+/* Modal Styling */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica no lugar mesmo ao rolar */
+    z-index: 1000; /* Fica no topo de tudo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita scroll se o conteúdo for muito grande */
+    background-color: rgba(0,0,0,0.8); /* Fundo semi-transparente escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #222; /* Fundo escuro para o conteúdo do modal */
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #555;
+    width: 80%; /* Largura do conteúdo do modal */
+    max-width: 600px; /* Largura máxima do conteúdo */
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    color: #eee; /* Cor do texto no modal */
+    text-align: left; /* Alinha o texto à esquerda dentro do modal */
+}
+
+.modal-content h2 {
+    color: #6495ED;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.close-button {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 .contato-header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,6 +101,7 @@ body {
   background-color: #000;
   border-bottom: 1px solid #111;
   font-size: 1.5rem;
+  z-index: 9999;
 }
 
 .contato-header a {
