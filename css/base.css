@@ -16,6 +16,7 @@ body {
   background-color: #000000;
   overflow-x: hidden;
 }
+
 /* Foto personalizada como ícone */
 .icone-foto {
   margin-top: 10px;
@@ -69,6 +70,18 @@ body {
 .modal-content p {
     margin-bottom: 10px;
     line-height: 1.6;
+}
+
+.Habilidades{
+  width: 45px;
+  height: 46px;
+}
+#img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espaço entre as imagens, opcional */
+  flex-wrap: wrap;
 }
 
 .close-button {
