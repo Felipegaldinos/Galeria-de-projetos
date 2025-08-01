@@ -94,6 +94,22 @@ main {
   background: #3b82f6;
   color: white;
 }
+#bnt-cl{
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid rgba(243, 244, 247, 0.3);
+  color: #f6f8fa;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+#bnt-cl:hover{
+  background: white;
+  color: #000;
+  
+}
 
 .projects-grid {
   display: grid;
