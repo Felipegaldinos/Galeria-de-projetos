@@ -1,77 +1,153 @@
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-    margin: 0;
-    padding: 20px;
+font-family: 'Inter', sans-serif;
+background-color: #121826; /* Azul escuro/cinza escuro /
+color: #ffffff; / Branco para o texto principal */
+margin: 0;
+padding: 20px;
 }
 
 .dashboard-header {
-    text-align: center;
-    margin-bottom: 40px;
+text-align: center;
+margin-bottom: 40px;
 }
 
 .dashboard-header h1 {
-    font-weight: 700;
-    font-size: 2.5em;
-    color: #2c3e50;
+font-weight: 700;
+font-size: 2.5em;
+color: #3ab0ff; /* Azul mais claro/turquesa */
+margin-top: 0;
+}
+
+.dashboard-header p {
+color: #cccccc; /* Tom de cinza claro para o subtítulo */
 }
 
 .dashboard-container {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+max-width: 900px;
+margin: 0 auto;
+background-color: #1e293b; /* Um pouco mais claro que o fundo /
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); / Sombra mais escura */
 }
 
 .summary-card {
-    background-color: #ecf0f1;
-    border-radius: 6px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    display: inline-block;
-    width: 48%; /* Adjust for spacing */
-    box-sizing: border-box;
+background-color: #334155; /* Tom mais claro para os cards de resumo */
+border-radius: 6px;
+padding: 20px;
+margin-bottom: 20px;
+text-align: center;
+display: inline-block;
+width: 48%;
+box-sizing: border-box;
 }
 
 .summary-card:first-child {
-    margin-right: 2%;
+margin-right: 2%;
 }
 
 .summary-card h2 {
-    font-weight: 500;
-    color: #7f8c8d;
-    margin-top: 0;
+font-weight: 500;
+color: #cbd5e1; /* Cinza mais claro para os títulos dos cards */
+margin-top: 0;
 }
 
 .summary-card p {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #34495e;
-    margin: 0;
+font-size: 2.5em;
+font-weight: 700;
+color: #3ab0ff; /* Azul mais claro/turquesa para os números */
+margin: 0;
+}
+
+.summary-cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.summary-cards-grid .summary-card {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    margin-right: 0;
+}
+
+/* Ajuste para 2 colunas em telas menores */
+@media (max-width: 768px) {
+    .summary-cards-grid .summary-card {
+        flex: 1 1 calc(50% - 10px);
+    }
 }
 
 .dashboard-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+color: #f8f9fa; /* Texto branco para a tabela */
 }
 
 .dashboard-table th, .dashboard-table td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+padding: 12px;
+border-bottom: 1px solid #475569; /* Borda da tabela mais escura */
+text-align: left;
 }
 
 .dashboard-table th {
-    background-color: #f8f9fa;
-    font-weight: 600;
-    color: #555;
+background-color: #27374d; /* Cabeçalho da tabela mais escuro */
+font-weight: 600;
+color: #e2e8f0;
 }
 
 .dashboard-table tbody tr:hover {
-    background-color: #f1f1f1;
+background-color: #1e293b; /* Hover mais sutil */
+}
+
+/* Adicional: Estilo para links, se você adicionar algum */
+a {
+color: #3ab0ff;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #1e293b;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 0 auto 20px;
+}
+
+.filter-container label {
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+.filter-container input[type="date"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #475569;
+    background-color: #27374d;
+    color: #f8f9fa;
+    cursor: pointer;
+}
+
+.filter-container button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3ab0ff;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.filter-container button:hover {
+    background-color: #2196f3;
 }

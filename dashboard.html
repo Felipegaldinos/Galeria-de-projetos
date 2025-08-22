@@ -13,14 +13,34 @@
         <p>Visitas e cliques registrados no seu site.</p>
     </header>
 
+    <div class="filter-container">
+        <label for="date-filter">Filtrar por data:</label>
+        <input type="date" id="date-filter">
+        <button id="filter-button">Filtrar</button>
+    </div>
+
     <main class="dashboard-container">
-        <div class="summary-card">
-            <h2>Total de Visitas</h2>
-            <p id="total-visitas">0</p>
-        </div>
-        <div class="summary-card">
-            <h2>Cliques em Contato</h2>
-            <p id="total-contato">0</p>
+        <div class="summary-cards-grid">
+            <div class="summary-card">
+                <h2>Total de Visitas</h2>
+                <p id="total-visitas">0</p>
+            </div>
+            <div class="summary-card">
+                <h2>Cliques WhatsApp</h2>
+                <p id="total-whatsapp">0</p>
+            </div>
+            <div class="summary-card">
+                <h2>Cliques Instagram</h2>
+                <p id="total-instagram">0</p>
+            </div>
+            <div class="summary-card">
+                <h2>Cliques Email</h2>
+                <p id="total-email">0</p>
+            </div>
+            <div class="summary-card">
+                <h2>Cliques LinkedIn</h2>
+                <p id="total-linkedin">0</p>
+            </div>
         </div>
         
         <table class="dashboard-table">

@@ -1,52 +1,93 @@
-document.addEventListener('DOMContentLoaded', async () => {
-    // Referencia o corpo da tabela onde os eventos serão exibidos
+document.addEventListener('DOMContentLoaded', () => {
+    // Referências para os elementos do DOM
+    const dateFilter = document.getElementById('date-filter');
+    const filterButton = document.getElementById('filter-button');
     const eventosTableBody = document.getElementById('eventos-table-body');
-    // Referencia os cards de resumo
     const totalVisitas = document.getElementById('total-visitas');
-    const totalContato = document.getElementById('total-contato');
+    const totalWhatsapp = document.getElementById('total-whatsapp');
+    const totalInstagram = document.getElementById('total-instagram');
+    const totalEmail = document.getElementById('total-email');
+    const totalLinkedin = document.getElementById('total-linkedin');
 
-    let visitasCount = 0;
-    let contatoCount = 0;
+    // Função para buscar e exibir os dados
+    const fetchAndDisplayEvents = async (selectedDate) => {
+        let visitasCount = 0;
+        let whatsappCount = 0;
+        let instagramCount = 0;
+        let emailCount = 0;
+        let linkedinCount = 0;
 
-    try {
-        // Acessa a coleção 'eventos' no Firestore
-        const eventosRef = db.collection('eventos');
-        const eventosSnapshot = await eventosRef.orderBy('timestamp', 'desc').get();
+        try {
+            let eventosRef = db.collection('eventos');
 
-        // Limpa a tabela antes de adicionar os dados
-        eventosTableBody.innerHTML = '';
+            // Se uma data foi selecionada, aplique o filtro
+            if (selectedDate) {
+                const startDate = new Date(selectedDate);
+                const endDate = new Date(selectedDate);
+                endDate.setHours(23, 59, 59, 999); // Final do dia
 
-        eventosSnapshot.forEach(doc => {
-            const data = doc.data();
-            const tipo = data.tipo;
-            const timestamp = data.timestamp;
-
-            // Incrementa os contadores
-            if (tipo === 'visita') {
-                visitasCount++;
-            } else {
-                contatoCount++;
+                const startTimestamp = firebase.firestore.Timestamp.fromDate(startDate);
+                const endTimestamp = firebase.firestore.Timestamp.fromDate(endDate);
+                
+                eventosRef = eventosRef.where('timestamp', '>=', startTimestamp).where('timestamp', '<=', endTimestamp);
             }
 
-            // Formata a data e hora
-            const date = timestamp.toDate();
-            const formattedDate = date.toLocaleDateString('pt-BR');
-            const formattedTime = date.toLocaleTimeString('pt-BR');
+            const eventosSnapshot = await eventosRef.orderBy('timestamp', 'desc').get();
 
-            // Cria uma nova linha na tabela para cada evento
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${tipo}</td>
-                <td>${formattedDate} às ${formattedTime}</td>
-            `;
-            eventosTableBody.appendChild(row);
-        });
+            eventosTableBody.innerHTML = '';
 
-        // Atualiza os cards de resumo
-        totalVisitas.textContent = visitasCount;
-        totalContato.textContent = contatoCount;
+            eventosSnapshot.forEach(doc => {
+                const data = doc.data();
+                const tipo = data.tipo;
+                const timestamp = data.timestamp;
 
-    } catch (e) {
-        console.error("Erro ao carregar dados do Firestore: ", e);
-    }
+                switch (tipo) {
+                    case 'visita':
+                        visitasCount++;
+                        break;
+                    case 'clique_whatsapp':
+                        whatsappCount++;
+                        break;
+                    case 'clique_instagram':
+                        instagramCount++;
+                        break;
+                    case 'clique_email':
+                        emailCount++;
+                        break;
+                    case 'clique_linkedin':
+                        linkedinCount++;
+                        break;
+                }
+
+                const date = timestamp.toDate();
+                const formattedDate = date.toLocaleDateString('pt-BR');
+                const formattedTime = date.toLocaleTimeString('pt-BR');
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${tipo}</td>
+                    <td>${formattedDate} às ${formattedTime}</td>
+                `;
+                eventosTableBody.appendChild(row);
+            });
+
+            totalVisitas.textContent = visitasCount;
+            totalWhatsapp.textContent = whatsappCount;
+            totalInstagram.textContent = instagramCount;
+            totalEmail.textContent = emailCount;
+            totalLinkedin.textContent = linkedinCount;
+
+        } catch (e) {
+            console.error("Erro ao carregar dados do Firestore: ", e);
+        }
+    };
+
+    // Event listener para o botão de filtro
+    filterButton.addEventListener('click', () => {
+        const selectedDate = dateFilter.value;
+        fetchAndDisplayEvents(selectedDate);
+    });
+    
+    // Carregue todos os dados inicialmente
+    fetchAndDisplayEvents();
 });
