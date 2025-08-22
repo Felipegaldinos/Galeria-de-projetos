@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Visitas | Felipe Galdino</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>Painel de Acesso</h1>
+        <p>Visitas e cliques registrados no seu site.</p>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="summary-card">
+            <h2>Total de Visitas</h2>
+            <p id="total-visitas">0</p>
+        </div>
+        <div class="summary-card">
+            <h2>Cliques em Contato</h2>
+            <p id="total-contato">0</p>
+        </div>
+        
+        <table class="dashboard-table">
+            <thead>
+                <tr>
+                    <th>Tipo de Evento</th>
+                    <th>Data e Hora</th>
+                </tr>
+            </thead>
+            <tbody id="eventos-table-body">
+                </tbody>
+        </table>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    
+    <script src="js/firebase-config.js"></script>
+    
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

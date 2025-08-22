@@ -1,0 +1,77 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+    font-weight: 700;
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+.dashboard-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card {
+    background-color: #ecf0f1;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+    width: 48%; /* Adjust for spacing */
+    box-sizing: border-box;
+}
+
+.summary-card:first-child {
+    margin-right: 2%;
+}
+
+.summary-card h2 {
+    font-weight: 500;
+    color: #7f8c8d;
+    margin-top: 0;
+}
+
+.summary-card p {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #34495e;
+    margin: 0;
+}
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.dashboard-table th, .dashboard-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.dashboard-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #555;
+}
+
+.dashboard-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
