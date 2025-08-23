@@ -1,8 +1,10 @@
-// Este arquivo agora usa a função global 'registrarEvento'
-
 document.addEventListener('DOMContentLoaded', () => {
     // A função é chamada diretamente
-    registrarEvento('visita');
+    // Verifica se a URL atual é a página principal (index.html)
+    // E só então a visita é registrada.
+    if (window.location.pathname === '/' || window.location.pathname.includes('index.html')) {
+        handlePageVisit();
+    }
 
     const linksDeContato = [
         { selector: 'a[aria-label="WhatsApp"]', tipo: 'clique_whatsapp' },
