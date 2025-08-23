@@ -1,26 +1,23 @@
-// A função 'registrarEvento' agora usa a variável global 'db'
-// e o objeto global 'firebase'
-async function registrarEvento(tipo) {
+// A função 'registrarEvento' agora usa a variável global 'db' e o objeto global 'firebase'
+async function registrarEvento(tipo, sessionId = null) {
     try {
         const eventosRef = db.collection("eventos");
-        const docRef = await eventosRef.add({
+        const docData = {
             tipo: tipo,
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
-        });
+        };
+        // Adiciona o sessionId se ele existir (para visitas)
+        if (sessionId) {
+            docData.sessionId = sessionId;
+        }
+        const docRef = await eventosRef.add(docData);
         console.log("Evento registrado com sucesso! ID do documento: ", docRef.id);
     } catch (e) {
         console.error("Erro ao registrar evento: ", e);
     }
 }
 
-// ----- NOVO CÓDIGO PARA TRATAR O COOKIE -----
-
-/**
- * Define um cookie com um nome e valor, e um número de dias para expirar.
- * @param {string} name - O nome do cookie.
- * @param {string} value - O valor do cookie.
- * @param {number} days - O número de dias até o cookie expirar.
- */
+// Funções para manipular cookies (já fornecidas antes)
 function setCookie(name, value, days) {
     const d = new Date();
     d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -28,11 +25,6 @@ function setCookie(name, value, days) {
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
-/**
- * Pega o valor de um cookie pelo nome.
- * @param {string} name - O nome do cookie.
- * @returns {string} - O valor do cookie ou uma string vazia se não for encontrado.
- */
 function getCookie(name) {
     const cookieName = name + "=";
     const decodedCookie = decodeURIComponent(document.cookie);
@@ -49,19 +41,19 @@ function getCookie(name) {
     return "";
 }
 
-// ----- Modificação na chamada da função de registro de eventos -----
-// Agora, ao invés de chamar registrarEvento('visita') diretamente,
-// você vai verificar se o cookie 'site_visitado' existe.
-
-// Crie uma nova função para lidar com o evento de visita
-function handlePageVisit() {
-    const visitedCookie = getCookie("site_visitado");
-    if (visitedCookie === "") {
-        // Se o cookie não existe, registra a visita e define o cookie
-        registrarEvento('visita');
-        setCookie("site_visitado", "true", 1); // Expira em 1 dia
-    }
+// ----- NOVO CÓDIGO para a visita única -----
+function generateUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
 }
 
-// Agora, no seu event-listeners.js, você chamará handlePageVisit()
-// em vez de registrarEvento('visita')
+function handlePageVisit() {
+    let sessionId = getCookie("sessionId");
+    if (!sessionId) {
+        sessionId = generateUUID();
+        setCookie("sessionId", sessionId, 1); // Expira em 1 dia
+    }
+    registrarEvento('visita', sessionId);
+}
