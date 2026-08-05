@@ -2,7 +2,7 @@ window.projectsData = [
   {
     name: "E-commerce",
     description: "Plataforma de e-commerce completa com carrinho de compras, painel administrador e controle de estoque.",
-    technologies: ["React", "Firebase", "Clientes"],
+    technologies: ["React", "Node.js", "Firebase", "Clientes"],
     image: "img/araujo-esportes.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://catalogo-araujo-esportes.firebaseapp.com"
@@ -10,7 +10,7 @@ window.projectsData = [
   {
     name: "Site para Acadêmia",
     description: "Modelo de site intitucional que se encaixa em vários nichos.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["React", "Node.js"],
     image: "img/academia.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://academia-roan-ten.vercel.app/"
@@ -18,7 +18,7 @@ window.projectsData = [
   {
     name: "Site para agendamento de viagens",
     description: "Site institucional para reservar viagens.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["React", "Node.js"],
     image: "img/destino.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://destino-encantado.vercel.app/"
@@ -26,7 +26,7 @@ window.projectsData = [
   {
     name: "Site de saúde e lazer",
     description: "Site institucional de saúde e lazer .",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["React", "Node.js"],
     image: "img/equilibrio.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://equlibrio-vital.vercel.app/"
@@ -42,7 +42,7 @@ window.projectsData = [
   {
     name: "Landing page para Acadêmia",
     description: "Modelo de site página unica para capitação de clientes.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["React", "Node.js"],
     image: "img/vivafit.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://vivafit-academia.vercel.app/"
@@ -50,7 +50,7 @@ window.projectsData = [
   {
     name: "Clínica Médica",
     description: "Site para clinicas médicas, com agenda, mapa de localização e etc.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["React", "Node.js"],
     image: "img/medica.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://clinica-vida-plena.vercel.app/"
@@ -58,7 +58,7 @@ window.projectsData = [
   {
     name: "Clínica Odontológica",
     description: "Site institucional de saúde e lazer .",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["React", "Node.js"],
     image: "img/sorriso.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://sorriso-ideal.vercel.app/"
@@ -66,7 +66,7 @@ window.projectsData = [
   {
     name: "Acadêmia Blackfit",
     description: "Landing page para acadêmias.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["React", "Node.js"],
     image: "img/acade.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://academia-lp.vercel.app/"
@@ -74,7 +74,7 @@ window.projectsData = [
   {
     name: "Advocacia",
     description: "Site para advocacias com menu de navegação.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["React", "Node.js"],
     image: "img/ad.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://advocacia-jet.vercel.app/"
@@ -82,7 +82,7 @@ window.projectsData = [
   {
     name: "Restaurante",
     description: "Site com menu de navegação, podendo reserva horário.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["React", "Node.js"],
     image: "img/restaurante.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://restaurante-tau-khaki.vercel.app/"
@@ -106,7 +106,7 @@ window.projectsData = [
   {
     name: "CVCroft gerado de currículo",
     description: "Plataforma geradora de currículo com IA.",
-    technologies: ["React", "Firebase"],
+    technologies: ["React", "Node.js", "Firebase"],
     image: "img/CVCroft.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://curriculo-inteligente-3f70e.firebaseapp.com/"
@@ -114,7 +114,7 @@ window.projectsData = [
   {
     name: "Loja de calçados",
     description: "Loja de calçados, com carrinho e opção de marca seu favorito.",
-    technologies: ["React"],
+    technologies: ["React", "Node.js"],
     image: "img/calcados.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://loja-calcados-nine.vercel.app/"
@@ -174,5 +174,13 @@ window.projectsData = [
     image: "img/catalogo-araujo.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://catalogo-pied.vercel.app/"
+  },
+  {
+    name: "Landing page para consultoria",
+    description: "Plataforma de e-commerce completa com carrinho de compras, painel administrador e controle de estoque.",
+    technologies: ["HTML", "CSS", "JavaScript", "Clientes"],
+    image: "img/unir.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://unnir-consultoria.vercel.app/"
   }
 ];
