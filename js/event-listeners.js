@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // A função é chamada diretamente
-    // Verifica se a URL atual é a página principal (index.html)
-    // E só então a visita é registrada.
+
     if (window.location.pathname === '/' || window.location.pathname.includes('index.html')) {
         handlePageVisit();
     }

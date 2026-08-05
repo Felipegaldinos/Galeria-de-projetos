@@ -3,10 +3,13 @@ window.Gallery = {
     grid: document.getElementById('projects-grid'),
     search: document.getElementById('project-search'),
     filterButtons: document.querySelectorAll('.filter-btn'),
+    loadMoreBtn: document.getElementById('load-more-btn'),
   },
   state: {
     currentFilter: 'all',
     searchTerm: '',
+    visibleCount: 6,
+    itemsPerPage: 6  
   },
   init() {
     this.bindEvents();
@@ -15,6 +18,7 @@ window.Gallery = {
   bindEvents() {
     this.elements.search.addEventListener('input', (e) => {
       this.state.searchTerm = e.target.value;
+      this.state.visibleCount = this.state.itemsPerPage; // Reseta o limite ao buscar
       this.renderProjects();
     });
 
@@ -23,9 +27,17 @@ window.Gallery = {
         this.elements.filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         this.state.currentFilter = btn.dataset.filter;
+        this.state.visibleCount = this.state.itemsPerPage; // Reseta o limite ao filtrar
         this.renderProjects();
       });
     });
+
+    if (this.elements.loadMoreBtn) {
+      this.elements.loadMoreBtn.addEventListener('click', () => {
+        this.state.visibleCount += this.state.itemsPerPage;
+        this.renderProjects();
+      });
+    }
   },
   getFilteredProjects() {
     return window.projectsData.filter(project => {
@@ -38,9 +50,25 @@ window.Gallery = {
   },
   renderProjects() {
     const filteredProjects = this.getFilteredProjects();
-    this.elements.grid.innerHTML = filteredProjects.length > 0 
-      ? filteredProjects.map(project => this.createProjectCard(project)).join('')
-      : '<div class="empty-state"><h3>🔍 Nenhum projeto encontrado</h3><p>Tente ajustar os filtros ou o termo de busca.</p></div>';
+    
+    if (filteredProjects.length === 0) {
+      this.elements.grid.innerHTML = '<div class="empty-state"><h3>🔍 Nenhum projeto encontrado</h3><p>Tente ajustar os filtros ou o termo de busca.</p></div>';
+      if (this.elements.loadMoreBtn) this.elements.loadMoreBtn.style.display = 'none';
+      return;
+    }
+
+    // Pega apenas a quantidade permitida no momento
+    const projectsToShow = filteredProjects.slice(0, this.state.visibleCount);
+    this.elements.grid.innerHTML = projectsToShow.map(project => this.createProjectCard(project)).join('');
+
+    // Controla a visibilidade do botão Carregar Mais
+    if (this.elements.loadMoreBtn) {
+      if (this.state.visibleCount >= filteredProjects.length) {
+        this.elements.loadMoreBtn.style.display = 'none';
+      } else {
+        this.elements.loadMoreBtn.style.display = 'inline-block';
+      }
+    }
   },
   createProjectCard(project) {
     const isHtmlPreview = project.type === 'html-preview';
@@ -79,7 +107,7 @@ window.Gallery = {
             </a>
             <a href="${project.demo}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
               <i class="fas fa-external-link-alt"></i>
-              Demo
+              Site
             </a>
           </div>
         </div>

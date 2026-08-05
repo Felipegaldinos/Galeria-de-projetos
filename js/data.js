@@ -1,5 +1,13 @@
 window.projectsData = [
   {
+    name: "Landing page para consultoria",
+    description: "Plataforma de e-commerce completa com carrinho de compras, painel administrador e controle de estoque.",
+    technologies: ["HTML", "CSS", "JavaScript", "Clientes"],
+    image: "img/unir.png",
+    github: "https://github.com/felipegaldinos",
+    demo: "https://unnir-consultoria.vercel.app/"
+  },
+  {
     name: "E-commerce",
     description: "Plataforma de e-commerce completa com carrinho de compras, painel administrador e controle de estoque.",
     technologies: ["React", "Node.js", "Firebase", "Clientes"],
@@ -10,7 +18,7 @@ window.projectsData = [
   {
     name: "Site para Acadêmia",
     description: "Modelo de site intitucional que se encaixa em vários nichos.",
-    technologies: ["React", "Node.js"],
+  technologies: ["React", "Node.js", "Pessoal"],
     image: "img/academia.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://academia-roan-ten.vercel.app/"
@@ -18,7 +26,7 @@ window.projectsData = [
   {
     name: "Site para agendamento de viagens",
     description: "Site institucional para reservar viagens.",
-    technologies: ["React", "Node.js"],
+    technologies: ["React", "Node.js", "Pessoal"],
     image: "img/destino.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://destino-encantado.vercel.app/"
@@ -26,7 +34,7 @@ window.projectsData = [
   {
     name: "Site de saúde e lazer",
     description: "Site institucional de saúde e lazer .",
-    technologies: ["React", "Node.js"],
+    technologies: ["React", "Node.js", "Pessoal"],
     image: "img/equilibrio.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://equlibrio-vital.vercel.app/"
@@ -34,7 +42,7 @@ window.projectsData = [
   {
     name: "Site para Acadêmia",
     description: "Modelo de site one page com menu de navegação.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Pessoal"],
     image: "img/fit.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://felipegaldinos.github.io/redzone-fitness/"
@@ -42,7 +50,7 @@ window.projectsData = [
   {
     name: "Landing page para Acadêmia",
     description: "Modelo de site página unica para capitação de clientes.",
-    technologies: ["React", "Node.js"],
+    technologies: ["React", "Node.js", "Pessoal"],
     image: "img/vivafit.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://vivafit-academia.vercel.app/"
@@ -50,7 +58,7 @@ window.projectsData = [
   {
     name: "Clínica Médica",
     description: "Site para clinicas médicas, com agenda, mapa de localização e etc.",
-    technologies: ["React", "Node.js"],
+    technologies: ["React", "Node.js", "Pessoal"],
     image: "img/medica.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://clinica-vida-plena.vercel.app/"
@@ -58,7 +66,7 @@ window.projectsData = [
   {
     name: "Clínica Odontológica",
     description: "Site institucional de saúde e lazer .",
-    technologies: ["React", "Node.js"],
+    technologies: ["React", "Node.js", "Pessoal"],
     image: "img/sorriso.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://sorriso-ideal.vercel.app/"
@@ -66,7 +74,7 @@ window.projectsData = [
   {
     name: "Acadêmia Blackfit",
     description: "Landing page para acadêmias.",
-    technologies: ["React", "Node.js"],
+    technologies: ["React", "Node.js", "Pessoal"],
     image: "img/acade.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://academia-lp.vercel.app/"
@@ -74,7 +82,7 @@ window.projectsData = [
   {
     name: "Advocacia",
     description: "Site para advocacias com menu de navegação.",
-    technologies: ["React", "Node.js"],
+    technologies: ["React", "Node.js", "Pessoal"],
     image: "img/ad.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://advocacia-jet.vercel.app/"
@@ -82,7 +90,7 @@ window.projectsData = [
   {
     name: "Restaurante",
     description: "Site com menu de navegação, podendo reserva horário.",
-    technologies: ["React", "Node.js"],
+    technologies: ["React", "Node.js", "Pessoal"],
     image: "img/restaurante.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://restaurante-tau-khaki.vercel.app/"
@@ -90,7 +98,7 @@ window.projectsData = [
   {
     name: "Landing page para curso",
     description: "Landing page para captar alunos e vender cursos.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Pessoal"],
     image: "img/cursos.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://cursos-xi.vercel.app/"
@@ -98,7 +106,7 @@ window.projectsData = [
   {
     name: "Portifólio",
     description: "Portifólio moderno, com galeria de projetos e com uma pré-vizualização do site.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Pessoal"],
     image: "img/portifolio0.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://felipegaldinos.github.io/portifolio-tecnico/"
@@ -106,7 +114,7 @@ window.projectsData = [
   {
     name: "CVCroft gerado de currículo",
     description: "Plataforma geradora de currículo com IA.",
-    technologies: ["React", "Node.js", "Firebase"],
+    technologies: ["React", "Node.js", "Firebase", "Pessoal"],
     image: "img/CVCroft.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://curriculo-inteligente-3f70e.firebaseapp.com/"
@@ -114,7 +122,7 @@ window.projectsData = [
   {
     name: "Loja de calçados",
     description: "Loja de calçados, com carrinho e opção de marca seu favorito.",
-    technologies: ["React", "Node.js"],
+    technologies: ["React", "Node.js", "Pessoal"],
     image: "img/calcados.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://loja-calcados-nine.vercel.app/"
@@ -122,7 +130,7 @@ window.projectsData = [
   {
     name: "Landing Page",
     description: "Landing page da empresa PotiguarTech, completa.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Pessoal"],
     image: "img/potiguar.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://potiguar-tech.vercel.app/"
@@ -130,7 +138,7 @@ window.projectsData = [
   {
     name: "Intituto de Cursos FGS",
     description: "Plataforma de cursos gratuítos de tecnologia.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Pessoal"],
     image: "img/instituto.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://instituto-fgs.vercel.app/"
@@ -138,7 +146,7 @@ window.projectsData = [
   {
     name: "Loja online simples",
     description: "Loja online, com catálogo de produtos que direciona para o whatsapp.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Pessoal"],
     image: "img/catalogo00.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://loja-araujo-esportes.vercel.app/"
@@ -146,7 +154,7 @@ window.projectsData = [
   {
     name: "Portífolio Web",
     description: "Portífolio web, formato institucional.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Pessoal"],
     image: "img/portifolioweb.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://felipegaldinos.github.io/portifolio-web/"
@@ -154,7 +162,7 @@ window.projectsData = [
   {
     name: "Landing page Vendas VSL",
     description: "Página de Vendas com VSL que Vendem Mesmo Enquanto Você Dorme!",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Pessoal"],
     image: "img/vsl.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://landingpage-vendas.vercel.app/"
@@ -162,7 +170,7 @@ window.projectsData = [
   {
     name: "Landing page para vendas de Smartphone",
     description: "Modelo de página que aumenta o número de vendas.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Pessoal"],
     image: "img/celular.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://felipegaldinos.github.io/landingpage-celular/"
@@ -170,17 +178,9 @@ window.projectsData = [
   {
     name: "Catálogo de produtos",
     description: "Catálogo de produtos, com carrinho e direcionamento para compras via whatsapp.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Pessoal"],
     image: "img/catalogo-araujo.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://catalogo-pied.vercel.app/"
-  },
-  {
-    name: "Landing page para consultoria",
-    description: "Plataforma de e-commerce completa com carrinho de compras, painel administrador e controle de estoque.",
-    technologies: ["HTML", "CSS", "JavaScript", "Clientes"],
-    image: "img/unir.png",
-    github: "https://github.com/felipegaldinos",
-    demo: "https://unnir-consultoria.vercel.app/"
   }
 ];
