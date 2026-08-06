@@ -1,8 +1,9 @@
 window.projectsData = [
   {
     name: "Landing page para consultoria",
-    description: "Plataforma de e-commerce completa com carrinho de compras, painel administrador e controle de estoque.",
+    description: "Landing page para consultoria, feito totalmente sobre medida.",
     technologies: ["HTML", "CSS", "JavaScript", "Clientes"],
+    featured: true,
     image: "img/unir.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://unnir-consultoria.vercel.app/"
@@ -11,6 +12,7 @@ window.projectsData = [
     name: "E-commerce",
     description: "Plataforma de e-commerce completa com carrinho de compras, painel administrador e controle de estoque.",
     technologies: ["React", "Node.js", "Firebase", "Clientes"],
+    featured: true,
     image: "img/araujo-esportes.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://catalogo-araujo-esportes.firebaseapp.com"
@@ -115,6 +117,7 @@ window.projectsData = [
     name: "CVCroft gerado de currículo",
     description: "Plataforma geradora de currículo com IA.",
     technologies: ["React", "Node.js", "Firebase", "Pessoal"],
+    featured: true,
     image: "img/CVCroft.png",
     github: "https://github.com/felipegaldinos",
     demo: "https://curriculo-inteligente-3f70e.firebaseapp.com/"

@@ -1,6 +1,8 @@
 window.Gallery = {
   elements: {
     grid: document.getElementById('projects-grid'),
+    featuredGrid: document.getElementById('featured-grid'),
+    featuredSection: document.getElementById('featured-section'),
     search: document.getElementById('project-search'),
     filterButtons: document.querySelectorAll('.filter-btn'),
     loadMoreBtn: document.getElementById('load-more-btn'),
@@ -9,16 +11,17 @@ window.Gallery = {
     currentFilter: 'all',
     searchTerm: '',
     visibleCount: 6,
-    itemsPerPage: 6  
+    itemsPerPage: 6
   },
   init() {
     this.bindEvents();
+    this.renderFeaturedProjects();
     this.renderProjects();
   },
   bindEvents() {
     this.elements.search.addEventListener('input', (e) => {
       this.state.searchTerm = e.target.value;
-      this.state.visibleCount = this.state.itemsPerPage; // Reseta o limite ao buscar
+      this.state.visibleCount = this.state.itemsPerPage;
       this.renderProjects();
     });
 
@@ -27,7 +30,7 @@ window.Gallery = {
         this.elements.filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         this.state.currentFilter = btn.dataset.filter;
-        this.state.visibleCount = this.state.itemsPerPage; // Reseta o limite ao filtrar
+        this.state.visibleCount = this.state.itemsPerPage;
         this.renderProjects();
       });
     });
@@ -38,6 +41,19 @@ window.Gallery = {
         this.renderProjects();
       });
     }
+  },
+  renderFeaturedProjects() {
+    if (!this.elements.featuredGrid) return;
+    const featured = window.projectsData.filter(p => p.featured === true);
+    
+    if (featured.length === 0) {
+      if (this.elements.featuredSection) this.elements.featuredSection.style.display = 'none';
+      return;
+    }
+
+    this.elements.featuredGrid.innerHTML = featured
+      .map(project => this.createProjectCard(project, true))
+      .join('');
   },
   getFilteredProjects() {
     return window.projectsData.filter(project => {
@@ -57,11 +73,9 @@ window.Gallery = {
       return;
     }
 
-    // Pega apenas a quantidade permitida no momento
     const projectsToShow = filteredProjects.slice(0, this.state.visibleCount);
-    this.elements.grid.innerHTML = projectsToShow.map(project => this.createProjectCard(project)).join('');
+    this.elements.grid.innerHTML = projectsToShow.map(project => this.createProjectCard(project, false)).join('');
 
-    // Controla a visibilidade do botão Carregar Mais
     if (this.elements.loadMoreBtn) {
       if (this.state.visibleCount >= filteredProjects.length) {
         this.elements.loadMoreBtn.style.display = 'none';
@@ -70,11 +84,12 @@ window.Gallery = {
       }
     }
   },
-  createProjectCard(project) {
+  createProjectCard(project, isFeatured = false) {
     const isHtmlPreview = project.type === 'html-preview';
     
     return `
-      <div class="project-card">
+      <div class="project-card ${isFeatured ? 'featured-card' : ''}">
+        ${isFeatured ? '<div class="featured-badge"><i class="fas fa-star"></i> Destaque</div>' : ''}
         <div class="project-preview">
           ${isHtmlPreview ? `
             <iframe 

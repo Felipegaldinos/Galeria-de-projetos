@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/corIvertida.css">
+    <link rel="stylesheet" href="css/cta.css">
 </head>
 
 <body>
@@ -64,8 +65,11 @@
                 <img src="img/Css.png" class="Habilidades" alt="CSS">
                 <img src="img/Javascript.png" class="Habilidades" alt="JS">
                 <img src="img/React.png" class="Habilidades" alt="REACT">
+                <img src="img/node.png" class="Habilidades" alt="NODE">
                 <img src="img/Python.png" class="Habilidades" alt="python">
+                <img src="img/Sass.png" class="Habilidades" alt="SASS">
                 <img src="img/git.png" class="Habilidades" alt="GIT">
+                <img src="img/github.png" class="Habilidades" alt="GITHUB">
                 <img src="img/fire.png" class="Habilidades" alt="firebase">
             </div>
         </div>
@@ -78,6 +82,16 @@
                 <p class="main-subtitle">Uma coleção dos meus trabalhos.</p>
             </header>
 
+            <!-- SEÇÃO DE PROJETOS EM DESTAQUE (NOVO) -->
+            <section class="featured-section" id="featured-section">
+                <h2 class="section-title"><i class="fas fa-star highlight-icon"></i> Projetos em Destaque</h2>
+                <div class="projects-grid featured-grid" id="featured-grid">
+                    <!-- Os projetos principais serão inseridos aqui pelo JavaScript -->
+                </div>
+            </section>
+
+            <!-- CONTROLES E GALERIA GERAL -->
+            <h2 class="section-title gallery-title">Todos os Projetos</h2>
             <div class="gallery-controls">
                 <div class="search-container">
                     <i class="fas fa-search"></i>
@@ -85,18 +99,150 @@
                 </div>
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">Todos</button>
-                    <button class="filter-btn" data-filter="Pessoal">Projetos Pessoais</button>
+                    <button class="filter-btn" data-filter="HTML">Projetos Pessoais</button>
                     <button class="filter-btn" id="bnt-cl" data-filter="Clientes">Projetos Empresariais</button>
                 </div>
             </div>
 
             <div class="projects-grid" id="projects-grid">
+                <!-- Projetos gerais carregados aqui -->
             </div>
+
             <div class="load-more-container">
                 <button id="load-more-btn" class="btn-load-more">Carregar mais projetos</button>
             </div>
         </div>
     </main>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="terminal-card">
+
+                <!-- Cabeçalho Superior -->
+                <div class="terminal-header">
+                    <span class="terminal-title">felipe-galdino ~ status-check.sh</span>
+                </div>
+
+                <!-- Conteúdo do Terminal -->
+                <div class="terminal-body">
+
+                    <!-- Status Badge Cyan/Azul -->
+                    <div class="status-badge">
+                        <span class="status-pulse"></span>
+                        <span class="status-text">Status: Disponível para novos projetos neste mês</span>
+                    </div>
+
+                    <!-- Título principal com brilho/brilho gradiente -->
+                    <h2 class="terminal-heading">
+                        Vamos tirar sua <br class="mobile-break">
+                        <span class="gradient-text">ideia do papel?</span>
+                    </h2>
+                    <p class="terminal-subtext">Selecione o tipo de projeto e a urgência para iniciar uma conversa
+                        rápida.</p>
+
+                    <!-- Widget Interativo de Opções -->
+                    <div class="interactive-widget">
+
+                        <!-- Passo 1: Serviços -->
+                        <div class="widget-group">
+                            <div class="group-title">
+                                <i class="fas fa-code group-icon"></i>
+                                <div>
+                                    <span class="step-num">1. Do que você precisa?</span>
+                                    <span class="step-desc">Escolha o tipo de projeto</span>
+                                </div>
+                            </div>
+
+                            <div class="cards-grid" id="service-options">
+
+                                <div class="option-card" data-value="Landing Page">
+                                    <div class="card-check"><i class="fas fa-check"></i></div>
+                                    <div class="card-icon"><i class="fas fa-window-maximize"></i></div>
+                                    <h4 class="card-title">Landing Page</h4>
+                                    <p class="card-subtitle">Páginas que convertem</p>
+                                </div>
+
+                                <div class="option-card active" data-value="Site Institucional">
+                                    <div class="card-check"><i class="fas fa-check"></i></div>
+                                    <div class="card-icon"><i class="fas fa-university"></i></div>
+                                    <h4 class="card-title">Site Institucional</h4>
+                                    <p class="card-subtitle">Presença profissional</p>
+                                </div>
+
+                                <div class="option-card" data-value="Redesign / UI UX">
+                                    <div class="card-check"><i class="fas fa-check"></i></div>
+                                    <div class="card-icon"><i class="fas fa-pen-nib"></i></div>
+                                    <h4 class="card-title">Redesign / UI UX</h4>
+                                    <p class="card-subtitle">Melhore a experiência</p>
+                                </div>
+
+                                <div class="option-card" data-value="Outro Projeto">
+                                    <div class="card-check"><i class="fas fa-check"></i></div>
+                                    <div class="card-icon"><i class="fas fa-code"></i></div>
+                                    <h4 class="card-title">Outro Projeto</h4>
+                                    <p class="card-subtitle">Conte sua ideia</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Passo 2: Urgência -->
+                        <div class="widget-group">
+                            <div class="group-title">
+                                <i class="fas fa-bolt group-icon"></i>
+                                <div>
+                                    <span class="step-num">2. Qual o nível de urgência?</span>
+                                    <span class="step-desc">Isso ajuda a priorizar seu projeto</span>
+                                </div>
+                            </div>
+
+                            <div class="cards-grid grid-2" id="urgency-options">
+
+                                <div class="option-card urgency-card active" data-value="Alta (preciso quanto antes)">
+                                    <div class="card-check"><i class="fas fa-check"></i></div>
+                                    <div class="card-icon"><i class="fas fa-bolt"></i></div>
+                                    <div class="card-text-group">
+                                        <h4 class="card-title">Alta</h4>
+                                        <p class="card-subtitle">Preciso o quanto antes</p>
+                                    </div>
+                                </div>
+
+                                <div class="option-card urgency-card" data-value="Normal (posso aguardar)">
+                                    <div class="card-check"><i class="fas fa-check"></i></div>
+                                    <div class="card-icon"><i class="far fa-calendar-alt"></i></div>
+                                    <div class="card-text-group">
+                                        <h4 class="card-title">Normal</h4>
+                                        <p class="card-subtitle">Posso aguardar</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Botão Principal de Envio -->
+                        <div class="widget-action">
+                            <a href="#" id="whatsapp-submit-btn" target="_blank" rel="noopener noreferrer"
+                                class="btn-whatsapp-glow">
+                                <div class="btn-left">
+                                    <div class="btn-icon-box"><i class="fab fa-whatsapp"></i></div>
+                                    <div class="btn-text-group">
+                                        <span class="btn-main-title">Enviar Orçamento no WhatsApp</span>
+                                        <span class="btn-sub-title">Resposta rápida e personalizada</span>
+                                    </div>
+                                </div>
+                                <div class="btn-arrow-box">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
@@ -118,6 +264,8 @@
     <script src="js/event-tracker.js"></script>
     <script src="js/event-listeners.js"></script>
 
+
+    <script src="js/cta.js"></script>
     <script src="js/corInvertida.js"></script>
 
 </body>
