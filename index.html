@@ -19,6 +19,14 @@
 </head>
 
 <body>
+<!-- PLANETAS NO FUNDO DO BODY -->
+    <div class="space-background">
+        <div class="stars-layer"></div>
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+        <div class="planet planet-3"></div>
+    </div>
+
     <!-- Header de Contato -->
     <header class="contato-header">
         <!-- Foto como logo -->
@@ -116,7 +124,10 @@
 
     <section class="cta-section">
         <div class="container">
-            <div class="terminal-card">
+            <div class="terminal-card" id="space-card">
+
+                <!-- Canvas de fundo espacial -->
+                <canvas id="stars-canvas"></canvas>
 
                 <!-- Cabeçalho Superior -->
                 <div class="terminal-header">
