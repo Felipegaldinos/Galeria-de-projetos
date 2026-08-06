@@ -126,3 +126,11 @@ body.light-mode #bnt-cl.active {
   color: #ffffff;
   border-color: #2563eb;
 }
+
+/* ===================================================
+   OCULTAR SISTEMA SOLAR NO TEMA CLARO (light-mode)
+   =================================================== */
+
+body.light-mode .space-background {
+  display: none !important;
+}
